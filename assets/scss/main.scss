@@ -36,10 +36,22 @@ body {
     margin-top: 10px;
   }
   
-  .playerPics{
-    width: 100px;
-    object-fit: cover;
-  }
+
+}
+.card{
+  border:0;
+}
+
+.playerPics{
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+.playerCards{
+  width: 100%;
+  text-align: center;
+
+  border: 0;
 }
 
 /* Size img Equipe*/
