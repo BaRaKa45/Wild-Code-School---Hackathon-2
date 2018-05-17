@@ -18,7 +18,7 @@ class Team
         return $this->name;
     }
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Player", mappedBy="name")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Player", mappedBy="team")
      * @ORM\JoinColumn(nullable=false)
      */
     private $players;

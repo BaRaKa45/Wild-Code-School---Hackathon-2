@@ -51,6 +51,13 @@ class Player
     /**
      * @var int
      *
+     * @ORM\Column(name="pictures", type="string", length=250, nullable=true)
+     */
+    private $pictures;
+
+    /**
+     * @var int
+     *
      * @ORM\Column(name="age", type="integer", nullable=true)
      */
     private $age;
@@ -215,5 +222,29 @@ class Player
     public function getTeam()
     {
         return $this->team;
+    }
+
+    /**
+     * Set pictures
+     *
+     * @param string $pictures
+     *
+     * @return Player
+     */
+    public function setPictures($pictures)
+    {
+        $this->pictures = $pictures;
+
+        return $this;
+    }
+
+    /**
+     * Get pictures
+     *
+     * @return string
+     */
+    public function getPictures()
+    {
+        return $this->pictures;
     }
 }
