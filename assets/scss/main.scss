@@ -15,6 +15,9 @@ body {
     transition-duration: 3s;
 
   }
+  h1{
+    text-align: center;
+  }
 
   img {
     width: 100%;
@@ -45,19 +48,26 @@ body {
 
   .card {
     margin-top: 10px;
+    border:0;
   }
-  
-  .playerPics{
-    width: 100px;
-    object-fit: cover;
-  }
+  .description{
+    text-align: justify;
+  margin-top: 20px;
+    }
 
   .margin-admin {
     margin-bottom: 20px;
     margin-left: 25px;
   }
+  .card-img-top{
+    height: 250px;
+    object-fit: contain;
+  }
+  .card-text{
+    max-height: 200px;
+  }
 
-.playerPics{
+  .playerPics{
   height: 300px;
   width: 300px;
   object-fit: contain;
@@ -67,7 +77,9 @@ body {
   text-align: center;
   border: 0;
 }
-
+.espace{
+  margin-top: 50px;
+}
 /* Size img Equipe*/
 
 .flex-parent{
