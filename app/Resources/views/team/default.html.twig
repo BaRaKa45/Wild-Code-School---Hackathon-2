@@ -12,12 +12,12 @@
             {% for team in teams %}
                 <div class="col-md-4 bottomMargin">
                     <div class="card fullheight">
-                        <img class="card-img-top " src="{{ team.flag }}" alt="Card image cap">
+                        <img class="card-img-top sizeImg" src="{{ team.flag }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title text-center"> Equipe : {{ team.name }}</h5>
-                            <p class="card-text text-justify"> Description : {{ team.description }}</p>
+                            <p class="card-text text-justify size"> Description : {{ team.description }}</p>
                         </div>
-                        <div class="card-footer"><a href="#" class="btn btn-primary fullwidth">Detail de l'équipe</a></div>
+                        <div class="card-footer"><a href="{{ path('show_team', { 'id': team.id }) }}" class="btn btn-primary fullwidth">En savoir plus</a></div>
                     </div>
                 </div>
             {% endfor %}
