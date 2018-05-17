@@ -27,6 +27,10 @@
         <li>
             <a href="{{ path('team_edit', { 'id': team.id }) }}">Edit</a>
         </li>
+        {% for player in team.players %}
+        {{ player.name }}
+        {% endfor %}
+
         <li>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
