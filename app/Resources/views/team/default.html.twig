@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h1>Liste des équipes</h1>
+        <p>Et des sponsors, faut pas déconner</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for team in teams %}
+                <div class="col-md-4 bottomMargin">
+                    <div class="card fullheight">
+                        <img class="card-img-top " src="{{ team.flag }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"> Equipe : {{ team.name }}</h5>
+                            <p class="card-text text-justify"> Description : {{ team.description }}</p>
+                        </div>
+                        <div class="card-footer"><a href="#" class="btn btn-primary fullwidth">Detail de l'équipe</a></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -9453,6 +9453,30 @@ body p {
   font-size: 20px;
 }
 
+.flex-parent {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+.fullheight {
+  height: 100%;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.size {
+  height: 280px;
+  overflow: hidden;
+}
+
+.bottomMargin {
+  margin-bottom: 25px;
+
 body .flag-admin {
   width: 35px;
   height: 20px;
@@ -9460,6 +9484,7 @@ body .flag-admin {
 
 body .card {
   margin-top: 10px;
+
 }
 
 body .playerPics {
