@@ -154,4 +154,22 @@ class TeamController extends Controller
             ->getForm()
         ;
     }
+
+
+    /**
+     * Finds and displays a team entity.
+     *
+     * @Route("/list/{id}", name="show_team")
+     * @Method("GET")
+     * @param Team $team
+     * @param Player $name
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function showOneTeam(Team $team)
+    {
+
+        return $this->render('team/showOneTeam.html.twig', array(
+            'team' => $team,
+        ));
+    }
 }
