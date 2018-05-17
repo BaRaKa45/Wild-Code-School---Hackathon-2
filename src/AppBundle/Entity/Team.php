@@ -42,14 +42,14 @@ class Team
     /**
      * @var string
      *
-     * @ORM\Column(name="flag", type="string", length=255)
+     * @ORM\Column(name="flag", type="string")
      */
     private $flag;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="string")
      */
 
     private $description;
