@@ -9453,8 +9453,6 @@ body p {
   font-size: 20px;
 }
 
-/* Size img Equipe*/
-
 .flex-parent {
   display: flex;
 }
@@ -9478,9 +9476,19 @@ body p {
 
 .bottomMargin {
   margin-bottom: 25px;
+
+body .flag-admin {
+  width: 35px;
+  height: 20px;
+}
+
+body .card {
+  margin-top: 10px;
+
 }
 
 body .playerPics {
   width: 100px;
   object-fit: cover;
 }
+
