@@ -10,6 +10,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Flag</th>
+                <th>Description</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@
                 <td><a href="{{ path('team_show', { 'id': team.id }) }}">{{ team.id }}</a></td>
                 <td>{{ team.name }}</td>
                 <td>{{ team.flag }}</td>
+                <td>{{ team.description }}</td>
                 <td>
                     <ul>
                         <li>
