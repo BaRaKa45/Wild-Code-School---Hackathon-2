@@ -11,11 +11,14 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function indexAction(/*Request $request*/)
     {
-        // replace this example code with whatever you need
+        $em = $this->getDoctrine()->getManager();
+
+        $contests = $em->getRepository('AppBundle:Contest')->findAll();
+
         return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'contests' => $contests,
         ]);
     }
 }
