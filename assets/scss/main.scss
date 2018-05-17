@@ -111,19 +111,25 @@ body {
   .bottomMargin {
     margin-bottom: 25px;
   }
- . heightCol {
-  height: 150px;
-}
 
+  .heightCol {
+    height: 100%;
+  }
+
+  .heightRow {
+    height: 150px;
+  }
   .borderFluid {
     margin-left: 25px;
     margin-right: 25px;
     padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   .borderTree {
     border: 10px solid black;
     border-radius: 10px;
+    padding: 0px;
   }
 
   .finalCol {
@@ -137,5 +143,10 @@ body {
 
   .marginNeg {
     margin-bottom: 0px;
+  }
+
+  .imgtest {
+    height: 133px;
+    object-fit: cover;
   }
 }
