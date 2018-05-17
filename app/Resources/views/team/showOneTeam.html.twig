@@ -9,30 +9,36 @@
 
     <div class="container">
         <div class="row">
-            <img class="card-img-top sizeImg" src="{{ team.flag }}" alt="Card image cap">
+            <img class="card-img-top" src="{{ team.flag }}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title text-center"> Equipe : {{ team.name }}</h5>
                 <p class="card-text text-justify size"> Description : {{ team.description }}</p>
             </div>
         </div>
-
-        {% for player in team.players %}
-        <div class="row">
-
-        <div class="playerCards">
-            <div class="row">
-                <div class="card">
-                    <img src="{{ player.pictures }}" class="playerPics" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ player.name }}</h5>
-                        {#<p class="card-text">{{ player.description }}</p>#}
+    </div>
+    <hr>
+    <h1> Joueurs dans l'équipe.</h1>
+    <div class="espace"></div>
+    {% for player in team.players %}
+        <div class="container">
+            <div class="playerCards">
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                            <img src="{{ player.pictures }}" class="img-thumbnail" alt="Card image cap">
+                            <h5 class="card-title">{{ player.name }} {{ player.firstname }}</h5>
                     </div>
+                    <div class="col-md-6">
+                       <div class="description"> {{ player.description }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <h5 class="card">{{ player.numberPlayer }}</h5>
+                            </div>
+                        </div>
                 </div>
-                {% endfor %}
             </div>
         </div>
+    {% endfor %}
 
-    </div>
-
-    </div>
 {% endblock %}

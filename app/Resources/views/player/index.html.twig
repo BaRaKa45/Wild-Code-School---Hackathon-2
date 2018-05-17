@@ -7,6 +7,7 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Description</th>
                 <th>Name</th>
                 <th>Firstname</th>
                 <th>Numberplayer</th>
@@ -20,6 +21,7 @@
         {% for player in players %}
             <tr>
                 <td><a href="{{ path('player_show', { 'id': player.id }) }}">{{ player.id }}</a></td>
+                <td>{{ player.description }}</td>
                 <td>{{ player.name }}</td>
                 <td>{{ player.firstname }}</td>
                 <td>{{ player.numberPlayer }}</td>

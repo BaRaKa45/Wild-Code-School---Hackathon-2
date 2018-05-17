@@ -15,6 +15,10 @@ body {
     transition-duration: 3s;
 
   }
+  h1{
+    text-align: center;
+  }
+
   img {
     width: 100%;
     object-fit: cover;
@@ -32,17 +36,38 @@ body {
     height: 20px;
   }
 
+  .flag-large-admin {
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .score-large-admin {
+    font-size: 2em;
+  }
+
   .card {
     margin-top: 10px;
+    border:0;
   }
-  
+  .description{
+    text-align: justify;
+  margin-top: 20px;
+    }
 
-}
-.card{
-  border:0;
-}
+  .margin-admin {
+    margin-bottom: 20px;
+    margin-left: 25px;
+  }
+  .card-img-top{
+    height: 250px;
+    object-fit: contain;
+  }
+  .card-text{
+    max-height: 200px;
+  }
 
-.playerPics{
+  .playerPics{
   height: 300px;
   width: 300px;
   object-fit: contain;
@@ -50,10 +75,11 @@ body {
 .playerCards{
   width: 100%;
   text-align: center;
-
   border: 0;
 }
-
+.espace{
+  margin-top: 50px;
+}
 /* Size img Equipe*/
 
 .flex-parent{
@@ -84,4 +110,5 @@ body {
 
 .bottomMargin{
   margin-bottom: 25px;
+}
 }

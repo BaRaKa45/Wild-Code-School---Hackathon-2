@@ -26,6 +26,28 @@ class Player
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", nullable=true)
+     **/
+    private $description;
+
+    /**
+     * @return int
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param int $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
 
     /**
      * @var string
