@@ -1,5 +1,6 @@
 {% extends 'layout.html.twig' %}
 {% block body %}
+
     <img src="http://cms.intersport.fr/wp-content/uploads/2016/10/equipements-foot_banniere.png" class="img-responsive">
     <p>Ceci est du texte !</p>
     <p>ROLLAND CRADOS!</p>
@@ -7,4 +8,45 @@
         <p>{{ contest.team1.name }} VS {{ contest.team2.name }} le {{ contest.date|date('d-m-Y') }}</p>
         <p>Equipe 1 : {{ contest.resultTeam1 }} / Equipe 2 : {{ contest.resultTeam2 }}</p>
     {% endfor %}
+
+    <div class="container-fluid">
+        <div id="upper">
+            <h1>WORLD<span style="color:red">CHAMPIONSHIP</span></h1>
+        </div>
+    </div>
+    <nav class="container-fluid">
+        <ul>
+            <li class="main left"><span>HOME</span></li><li class="main"><span>PLAY</span></li><li class="main"><span>FOOTBALL CLUB</span></li><li class="right"><span href="">CUSTOMISE</span></li>
+        </ul>
+    </nav>
+    <div id="menu-wrapper">
+        <section id="big-menu" class="container-fluid">
+            <div class="d-flex flex-row">
+                <div class="p-2 item first">
+                    <h3>Match 1</h3>
+                </div>
+                <div class="p-2 item second">
+                    <h3>Match 2</h3>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="p-2 item third">
+                    <h3>Match 3</h3>
+                </div>
+                <div class="p-2 item forth">
+                    <h3>Match 4</h3>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="p-2 item fifth">
+                    <h3>Match 5</h3>
+                </div>
+                <div class="p-2 item last">
+                    <h3>+ MORE</h3>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
 {% endblock %}
