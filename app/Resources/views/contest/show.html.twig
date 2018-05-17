@@ -2,40 +2,57 @@
 
 {% block body %}
     {% include 'admin/navbar.html.twig' %}
-    <h1>Contest</h1>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Information sur le match
+            </div>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Id du match</th>
+                    <td>{{ contest.id }}</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>{% if contest.date %}{{ contest.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-6 text-center">
+                    <div class="col-12">
+                        <img class="img-fluid flag-large-admin" src="{{ contest.team1.flag }}" alt="">
+                    </div>
+                    <div class="col-12">
+                        <span class="text-center">{{ contest.team1 }}</span>
+                    </div>
+                    <div class="col-12">
+                        <span class="text-center score-large-admin">{{ contest.resultTeam1 }}</span>
+                    </div>
+                </div>
+                <div class="col-6 text-center">
+                    <div class="col-12">
+                        <img class="img-fluid flag-large-admin" src="{{ contest.team2.flag }}" alt="">
+                    </div>
+                    <div class="col-12">
+                        <span>{{ contest.team2 }}</span>
+                    </div>
+                    <div class="col-12">
+                        <span class="text-center score-large-admin">{{ contest.resultTeam2 }}</span>
+                    </div>
+                </div>
+            </div>
 
-    <table class="table table-striped">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ contest.id }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{% if contest.date %}{{ contest.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Resultteam1</th>
-                <td>{{ contest.resultTeam1 }}</td>
-            </tr>
-            <tr>
-                <th>Resultteam2</th>
-                <td>{{ contest.resultTeam2 }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('contest_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('contest_edit', { 'id': contest.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            <div class="row margin-admin">
+                    <a href="{{ path('contest_edit', { 'id': contest.id }) }}"><button class="btn btn-primary">Modifier</button></a>
+                    {{ form_start(delete_form) }}
+                    <input role="button" class="btn btn-danger" type="submit" value="Supprimer">
+                    {{ form_end(delete_form) }}
+            </div>
+        </div>
+        <div class="text-left">
+            <a role="button" class="btn btn-primary" style="margin-top:15px" href="{{ path('contest_index') }}">Retour sur la liste des matches</a>
+        </div>
+    </div>
 {% endblock %}

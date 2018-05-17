@@ -15,6 +15,7 @@ body {
     transition-duration: 3s;
 
   }
+
   img {
     width: 100%;
     object-fit: cover;
@@ -32,6 +33,16 @@ body {
     height: 20px;
   }
 
+  .flag-large-admin {
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .score-large-admin {
+    font-size: 2em;
+  }
+
   .card {
     margin-top: 10px;
   }
@@ -39,6 +50,11 @@ body {
   .playerPics{
     width: 100px;
     object-fit: cover;
+  }
+
+  .margin-admin {
+    margin-bottom: 20px;
+    margin-left: 25px;
   }
 }
 
