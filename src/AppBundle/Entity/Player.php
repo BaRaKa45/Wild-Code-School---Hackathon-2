@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Player
 {
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Team")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Team", inversedBy="players")
      * @ORM\JoinColumn(nullable=false)
      */
     private $team;
