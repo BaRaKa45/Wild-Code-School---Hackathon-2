@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Player;
 use AppBundle\Entity\Team;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -62,6 +63,9 @@ class TeamController extends Controller
      *
      * @Route("/{id}", name="team_show")
      * @Method("GET")
+     * @param Team $team
+     * @param Player $name
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function showAction(Team $team)
     {

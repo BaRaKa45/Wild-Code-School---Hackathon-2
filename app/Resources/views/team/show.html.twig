@@ -28,6 +28,11 @@
         <li>
             <a href="{{ path('team_edit', { 'id': team.id }) }}">Edit</a>
         </li>
+        {% for player in team.players %}
+            {{ player.name }}
+            <img src="{{ player.pictures }}" class="playerPics">
+        {% endfor %}
+
         <li>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
