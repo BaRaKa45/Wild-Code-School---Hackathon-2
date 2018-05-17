@@ -15,6 +15,7 @@ body {
     transition-duration: 3s;
 
   }
+
   img {
     width: 100%;
     object-fit: cover;
@@ -32,6 +33,16 @@ body {
     height: 20px;
   }
 
+  .flag-large-admin {
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .score-large-admin {
+    font-size: 2em;
+  }
+
   .card {
     margin-top: 10px;
   }
@@ -40,6 +51,21 @@ body {
     width: 100px;
     object-fit: cover;
   }
+
+  .margin-admin {
+    margin-bottom: 20px;
+    margin-left: 25px;
+  }
+
+.playerPics{
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+.playerCards{
+  width: 100%;
+  text-align: center;
+  border: 0;
 }
 
 /* Size img Equipe*/
@@ -61,10 +87,16 @@ body {
 }
 
 .size {
-  height: 280px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.sizeImg {
+  height: 300px;
   overflow: hidden;
 }
 
 .bottomMargin{
   margin-bottom: 25px;
+}
 }

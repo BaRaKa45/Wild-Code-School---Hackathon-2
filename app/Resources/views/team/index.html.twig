@@ -2,7 +2,10 @@
 
 {% block body %}
     {% include 'admin/navbar.html.twig' %}
-    <h1>Teams list</h1>
+    <div class="container">
+        <div class="card ">
+
+        <h1>Teams list</h1>
 
     <table>
         <thead>
@@ -16,7 +19,7 @@
         </thead>
         <tbody>
         {% for team in teams %}
-            <tr>
+            <tr class="card">
                 <td><a href="{{ path('team_show', { 'id': team.id }) }}">{{ team.id }}</a></td>
                 <td>{{ team.name }}</td>
                 <td>{{ team.flag }}</td>
@@ -36,9 +39,10 @@
         </tbody>
     </table>
 
-    <ul>
+    <div>
         <li>
             <a href="{{ path('team_new') }}">Create a new team</a>
         </li>
-    </ul>
+    </div>
+    </div>
 {% endblock %}
