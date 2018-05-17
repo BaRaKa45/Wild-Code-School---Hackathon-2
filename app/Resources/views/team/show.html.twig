@@ -28,7 +28,8 @@
             <a href="{{ path('team_edit', { 'id': team.id }) }}">Edit</a>
         </li>
         {% for player in team.players %}
-        {{ player.name }}
+            {{ player.name }}
+            <img src="{{ player.pictures }}" class="playerPics">
         {% endfor %}
 
         <li>

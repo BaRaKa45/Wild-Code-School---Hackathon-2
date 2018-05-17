@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Player
 {
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Team", inversedBy="name")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Team", inversedBy="players")
      * @ORM\JoinColumn(nullable=false)
      */
     private $team;
@@ -47,6 +47,13 @@ class Player
      * @ORM\Column(name="numberPlayer", type="integer", nullable=true)
      */
     private $numberPlayer;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="pictures", type="string", length=250, nullable=true)
+     */
+    private $pictures;
 
     /**
      * @var int
@@ -215,5 +222,29 @@ class Player
     public function getTeam()
     {
         return $this->team;
+    }
+
+    /**
+     * Set pictures
+     *
+     * @param string $pictures
+     *
+     * @return Player
+     */
+    public function setPictures($pictures)
+    {
+        $this->pictures = $pictures;
+
+        return $this;
+    }
+
+    /**
+     * Get pictures
+     *
+     * @return string
+     */
+    public function getPictures()
+    {
+        return $this->pictures;
     }
 }
