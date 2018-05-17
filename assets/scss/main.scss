@@ -15,7 +15,7 @@ body {
     transition-duration: 3s;
 
   }
-  h1{
+  h1 {
     text-align: center;
   }
 
@@ -30,7 +30,7 @@ body {
     font-size: 20px;
 
   }
-  
+
   .flag-admin {
     width: 35px;
     height: 20px;
@@ -48,67 +48,94 @@ body {
 
   .card {
     margin-top: 10px;
-    border:0;
+    border: 0;
   }
-  .description{
+  .description {
     text-align: justify;
-  margin-top: 20px;
-    }
+    margin-top: 20px;
+  }
 
   .margin-admin {
     margin-bottom: 20px;
     margin-left: 25px;
   }
-  .card-img-top{
+  .card-img-top {
     height: 250px;
     object-fit: contain;
   }
-  .card-text{
+  .card-text {
     max-height: 200px;
   }
 
-  .playerPics{
-  height: 300px;
-  width: 300px;
-  object-fit: contain;
-}
-.playerCards{
-  width: 100%;
-  text-align: center;
-  border: 0;
-}
-.espace{
-  margin-top: 50px;
-}
-/* Size img Equipe*/
+  .playerPics {
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+  }
+  .playerCards {
+    width: 100%;
+    text-align: center;
+    border: 0;
+  }
+  .espace {
+    margin-top: 50px;
+  }
+  /* Size img Equipe*/
 
-.flex-parent{
-  display: flex;
+  .flex-parent {
+    display: flex;
+  }
+
+  .flex-child {
+    flex: 1;
+  }
+
+  .fullheight {
+    height: 100%;
+  }
+
+  .fullwidth {
+    width: 100%;
+  }
+
+  .size {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .sizeImg {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .bottomMargin {
+    margin-bottom: 25px;
+  }
+ . heightCol {
+  height: 150px;
 }
 
-.flex-child{
-  flex: 1;
-}
+  .borderFluid {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 25px;
+  }
 
-.fullheight {
-  height: 100%;
-}
+  .borderTree {
+    border: 10px solid black;
+    border-radius: 10px;
+  }
 
-.fullwidth {
-  width: 100%;
-}
+  .finalCol {
+    height: 450px;
+  }
 
-.size {
-  height: 300px;
-  overflow: hidden;
-}
+  .NHLImg {
+    background-image: url("http://www.desktop-screens.com/data/out/55/2985013-ice-hockey-wallpapers.jpg");
+    background-attachment: fixed;
+  }
 
-.sizeImg {
-  height: 300px;
-  overflow: hidden;
-}
-
-.bottomMargin{
-  margin-bottom: 25px;
-}
+  .marginNeg {
+    margin-bottom: 0px;
+  }
 }
