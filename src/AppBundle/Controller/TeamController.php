@@ -32,6 +32,23 @@ class TeamController extends Controller
     }
 
     /**
+     * Lists all team entities.
+     *
+     * @Route("/list", name="team_index2")
+     * @Method("GET")
+     */
+    public function index2Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $teams = $em->getRepository('AppBundle:Team')->findAll();
+
+        return $this->render('team/default.html.twig', array(
+            'teams' => $teams,
+        ));
+    }
+
+    /**
      * Creates a new team entity.
      *
      * @Route("/new", name="team_new")
