@@ -81,6 +81,14 @@ body {
     height: 300px;
     width: 300px;
     object-fit: contain;
+
+  }
+
+  .img-thumbnail {
+    box-shadow: 5px 5px 5px #eee;
+    border: 0;
+    margin-bottom: 15px;
+
   }
   .playerCards {
     width: 100%;
