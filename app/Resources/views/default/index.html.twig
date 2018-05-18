@@ -1,10 +1,24 @@
 {% extends 'layout.html.twig' %}
 {% block body %}
-    <img src="http://cms.intersport.fr/wp-content/uploads/2016/10/equipements-foot_banniere.png" class="img-responsive">
-    <p>Ceci est du texte !</p>
-    <p>ROLLAND CRADOS!</p>
-    {% for contest in contests %}
+    {#<img src="http://cms.intersport.fr/wp-content/uploads/2016/10/equipements-foot_banniere.png" class="img-responsive">#}
+
+    {#{% for contest in contests %}
         <p>{{ contest.team1.name }} VS {{ contest.team2.name }} le {{ contest.date|date('d-m-Y') }}</p>
         <p>Equipe 1 : {{ contest.resultTeam1 }} / Equipe 2 : {{ contest.resultTeam2 }}</p>
-    {% endfor %}
+    {% endfor %}#}
+
+    <section class="container-fluid">
+        {% for contest in contests %}
+            <div class="d-flex flex-row">
+                <div class="p-2 item first">
+                    <h3>{{ contest.team1.name }}</h3>
+                    <p>Résultat : {{ contest.resultTeam1 }}</p>
+                </div>
+                <div class="p-2 item second">
+                    <h3>{{ contest.team2.name }}</h3>
+                    <p>Résultat : {{ contest.resultTeam2 }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
 {% endblock %}
