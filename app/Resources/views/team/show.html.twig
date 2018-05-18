@@ -2,45 +2,43 @@
 
 {% block body %}
     {% include 'admin/navbar.html.twig' %}
-    <h1>Team</h1>
-
-    <table>
-        <tbody>
+<div class="container">
+    <div class="card ">
+        <div class="card-header">
+            List des équipes
+        </div>
+        <table class="table table-striped">
+            <thead>
             <tr>
                 <th>Id</th>
                 <td>{{ team.id }}</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th>Nom</th>
                 <td>{{ team.name }}</td>
             </tr>
             <tr>
-                <th>Flag</th>
-                <td>{{ team.flag }}</td>
+                <th>Drapeau</th>
+                <td><img class="flag-admin" src="{{ team.flag }}"></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>{{ team.description }}</td>
             </tr>
-        </tbody>
+            <tr><th>Joueurs</th>
+            <td>
+                {% for player in team.players %}
+                    - {{ player.name }}
+                {% endfor %}
+            </td>
+            </tr>
     </table>
+        <a href="{{ path('team_edit', { 'id': team.id }) }}"role="button" class="btn btn-success">Editer</a>
 
-    <ul>
-        <li>
-            <a href="{{ path('team_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('team_edit', { 'id': team.id }) }}">Edit</a>
-        </li>
-        {% for player in team.players %}
-            {{ player.name }}
-            <img src="{{ player.pictures }}" class="playerPics">
-        {% endfor %}
+        {{ form_start(delete_form) }}
+        <input type="submit" value="Delete" class="btn btn-danger" style="width:100%;">
+        {{ form_end(delete_form) }}
 
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
+    </div></div>
 {% endblock %}
