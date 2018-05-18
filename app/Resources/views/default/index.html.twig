@@ -15,7 +15,7 @@
                         <h3>{{ contest.team1.name }}</h3>
                     </div>
                 </div>
-                <div class="col-md-4" style="margin-top: 75px">
+                <div class="col-md-4">
                     <p style="font-weight: bold; font-size: 35px; color: #fff">{{ contest.team1.name }}
                         VS {{ contest.team2.name }}</p>
                     <p style="font-size: 30px; color: #fff;">Le {{ contest.date|date('d-m-Y') }}</p>
@@ -40,7 +40,7 @@
                 <div class="row justify-content-center">
                     <h1 style="margin-top: 50px">Derniers articles</h1>
                     {% for article in articles %}
-                        <div class="d-flex flex-row">
+                        <div class="d-flex flex-row" style="margin-top:70px;">
                             <div class="col-md-5">
 
                                 <img src="{{ article.pictures }}" class="img-thumbnail" alt="Card image cap">
@@ -54,8 +54,7 @@
                                 <hr>
                                 <p class="card-text2">{{ article.content }}</p></div>
                         </div>
-                        <a role="button" class="btn btn-success float-right mt-2"
-                           href="{{ path('article_show', { 'id': article.id }) }}"> Lire l'article</a>
+
                     {% endfor %}
 
                 </div>
