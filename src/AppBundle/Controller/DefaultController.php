@@ -16,9 +16,15 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $contests = $em->getRepository('AppBundle:Contest')->findAll();
+        $articles = $em->getRepository('AppBundle:Article')->findAll();
+
 
         return $this->render('default/index.html.twig', [
             'contests' => $contests,
+            'articles' => $articles,
+
         ]);
     }
+
+
 }
