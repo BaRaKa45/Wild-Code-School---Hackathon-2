@@ -3,6 +3,63 @@
 body {
   background-color: white;
 
+  main, ul {
+    display:flex;
+  }
+
+  ul {
+    flex-direction:column;
+    width: 400px;
+    list-style:none;
+    padding:0;
+  }
+
+  .game + li {
+    flex-grow:1;
+  }
+
+  li:first-child,li:last-child {
+    flex-grow:.5;
+  }
+
+  .game {
+    padding-left:20px;
+  }
+
+  .winner {
+    font-weight:bold;
+  }
+
+  .game span {
+    float:right;
+    margin-right:5px;
+    margin-top:5px;;
+  }
+
+  .game-top {
+    border-bottom:1px solid #aaa;
+  }
+
+  .game-top + li {
+    border-right:1px solid #aaa; min-height:110px;
+  }
+
+  .game-bottom {
+    border-top:1px solid #aaa;
+  }
+
+  .small-flag {
+    height: 25px;
+    width: 30px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-right: 5px;
+  }
+
+  .small-flag-top {
+    position: relative;
+    top: -5px;
+  }
   .navbar-light .navbar-nav .nav-link {
     font-size: 20px;
     padding-left: 30px;

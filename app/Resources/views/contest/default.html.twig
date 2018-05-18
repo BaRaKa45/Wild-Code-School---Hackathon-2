@@ -1,107 +1,58 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
+    <div class="container">
+        <main>
+            <ul>
+                <li>&nbsp;</li>
 
-    <div class="jumbotron text-center marginNeg">
-        <h1>Avancée du championat</h1>
-        <p>Et des sponsors, faut pas déconner ...</p>
+                <li class="game game-top winner"><img class="small-flag small-flag-top" src="{{ contests.1.team1.flag }}">{{ contests.1.team1 }} <span>{{ contests.1.resultTeam1 }}</span></li>
+                <li>&nbsp;</li>
+                <li class="game game-bottom "><img class="small-flag" src="{{ contests.1.team2.flag }}">{{ contests.1.team2 }}<span>{{ contests.1.resultTeam2 }}</span></li>
+
+                <li>&nbsp;</li>
+
+                <li class="game game-top winner"><img class="small-flag small-flag-top" src="{{ contests.2.team1.flag }}">{{ contests.2.team1 }}<span>{{ contests.2.resultTeam1 }}</span></li>
+                <li>&nbsp;</li>
+                <li class="game game-bottom "><img class="small-flag" src="{{ contests.2.team2.flag }}">{{ contests.2.team2 }}<span>{{ contests.2.resultTeam2 }}</span></li>
+
+                <li>&nbsp;</li>
+
+                <li class="game game-top winner">Duke <span>73</span></li>
+                <li>&nbsp;</li>
+                <li class="game game-bottom ">Albany <span>61</span></li>
+                <li>&nbsp;</li>
+
+                <li class="game game-top winner">Duke <span>73</span></li>
+                <li>&nbsp;</li>
+                <li class="game game-bottom ">Albany <span>61</span></li>
+
+                <li>&nbsp;</li>
+            </ul>
+            <ul>
+                <li>&nbsp;</li>
+
+                <li class="game game-top winner"><img class="small-flag top" src="{{ contests.1.team1.flag }}">Lousville <span>79</span></li>
+                <li>&nbsp;</li>
+                <li class="game game-bottom ">NC A&T <span>48</span></li>
+
+                <li>&nbsp;</li>
+
+                <li class="game game-top winner">Colo St <span>84</span></li>
+                <li>&nbsp;</li>
+                <li class="game game-bottom ">Missouri <span>72</span></li>
+
+                <li>&nbsp;</li>
+            </ul>
+            <ul>
+                <li>&nbsp;</li>
+
+                <li class="game game-top winner">Lousville <span>85</span></li>
+                <li>&nbsp;</li>
+                <li class="game game-bottom ">Duke <span>63</span></li>
+
+                <li>&nbsp;</li>
+            </ul>
+        </main>
     </div>
-
-    <div class="container-fluid  NHLImg">
-        <div class="borderFluid">
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.1.flag }}">
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 offset-3 borderTree heightCol">
-                <p>{{ contests.2.id }}</p>
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.2.flag }}">
-            </div>
-        </div>
-
-        <div class="row heightRow">
-            <div class="col-md-2 heightCol">
-
-            </div>
-            <div class="col-md-2 offset-4 borderTree heightCol">
-                <p>Equipe</p>
-            </div>
-        </div>
-
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.3.flag }}">
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 offset-3 borderTree heightCol">
-                <p>Equipe</p>
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.4.flag }}">
-            </div>
-            <div class="col-md-3 offset-6 borderTree finalCol heightCol">
-                <p>Equipe</p>
-            </div>
-
-        </div>
-
-        <div class="row heightRow">
-            <div class="col-md-2 heightCol">
-
-            </div>
-
-        </div>
-
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.5.flag }}">
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 offset-3 borderTree heightCol">
-                <p>Equipe</p>
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.6.flag }}">
-            </div>
-        </div>
-
-        <div class="row heightRow">
-            <div class="col-md-2 heightCol">
-
-            </div>
-            <div class="col-md-2 offset-4 borderTree heightCol">
-                <p>Equipe</p>
-            </div>
-        </div>
-
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.7.flag }}">
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 offset-3 borderTree heightCol">
-                <p>Equipe</p>
-            </div>
-        </div>
-        <div class="row heightRow">
-            <div class="col-md-2 borderTree heightCol">
-                <img class="imgtest" src="{{ teams.0.flag }}">
-            </div>
-        </div>
-        </div>
-    </div>
-
 {% endblock %}
