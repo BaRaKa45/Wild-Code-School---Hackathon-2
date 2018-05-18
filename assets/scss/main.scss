@@ -70,8 +70,11 @@ body {
     margin-left: 25px;
   }
   .card-img-top {
-    height: 250px;
+    height: 70px;
+    margin-top: -30px;
     object-fit: contain;
+    z-index:850;
+
   }
   .card-text {
     max-height: 200px;
@@ -83,10 +86,21 @@ body {
     object-fit: contain;
 
   }
+  .imageheader{
+    width: 100%;
+    height: 300px;
+    background-image: url("https://image.ibb.co/mMLbDy/WEB_1170x800px_Portfolio_Hockey.jpg");
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-attachment: fixed;
+
+
+  }
 
   .img-thumbnail {
     box-shadow: 5px 5px 5px #eee;
     border: 0;
+    border-radius: 0;
     margin-bottom: 15px;
 
   }
