@@ -18,7 +18,7 @@
             <tr>
                 <td><a href="{{ path('team_show', { 'id': team.id }) }}">{{ team.id }}</a></td>
                 <td>{{ team.name }}</td>
-                <td><img class="flag-admin" src="{{ team.flag }}">
+                <td><img class="flag-admin" src="{{ team.flag }}"></td>
                 <td>
                     <ul>
                         <a role="button" class="btn btn-success"
@@ -32,6 +32,6 @@
         </tbody>
     </table>
 
-            <a href="{{ path('team_new') }}" role="button" class="btn btn-primary">AJouter une équipe</a>
+            <a href="{{ path('team_new') }}" role="button" class="btn btn-primary">Ajouter une équipe</a>
     </div>
 {% endblock %}
