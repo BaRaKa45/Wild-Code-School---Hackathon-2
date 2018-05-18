@@ -8,13 +8,17 @@
     {% endfor %}#}
 
     <section class="container-fluid">
-        <div class="d-flex flex-row">
-            <div class="p-2 item first">
-                <h3>TEAMS IN FORMS</h3>
+        {% for contest in contests %}
+            <div class="d-flex flex-row">
+                <div class="p-2 item first">
+                    <h3>{{ contest.team1.name }}</h3>
+                    <p>Résultat : {{ contest.resultTeam1 }}</p>
+                </div>
+                <div class="p-2 item second">
+                    <h3>{{ contest.team2.name }}</h3>
+                    <p>Résultat : {{ contest.resultTeam2 }}</p>
+                </div>
             </div>
-            <div class="p-2 item second">
-                <h3>ULTIMATE TEAM</h3>
-            </div>
-        </div>
+        {% endfor %}
     </section>
 {% endblock %}
