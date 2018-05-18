@@ -1,51 +1,42 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
-    <h1>Players list</h1>
-
-    <table>
+    {% include 'admin/navbar.html.twig' %}
+<div class="container">
+    <div class="card ">
+        <div class="card-header">
+                List des joueurs
+            </div>
+    <table class="table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Description</th>
-                <th>Name</th>
-                <th>Firstname</th>
-                <th>Numberplayer</th>
-                <th>Pictures</th>
+                <th>Nom</th>
                 <th>Age</th>
                 <th>Role</th>
-                <th>Actions</th>
+                <th>Equipe</th>
+
             </tr>
         </thead>
         <tbody>
+        <tbody>
         {% for player in players %}
             <tr>
-                <td><a href="{{ path('player_show', { 'id': player.id }) }}">{{ player.id }}</a></td>
-                <td>{{ player.description }}</td>
-                <td>{{ player.name }}</td>
-                <td>{{ player.firstname }}</td>
-                <td>{{ player.numberPlayer }}</td>
-                <td>{{ player.pictures }}</td>
+                <td>{{ player.name }} - {{ player.firstname }}</td>
                 <td>{{ player.age }}</td>
-                <td>{{ player.role }}</td>
+                <td>{{ player.Role }}</td>
+                <td><img class="flag-admin" src="{{ player.team.flag }}">
                 <td>
                     <ul>
-                        <li>
-                            <a href="{{ path('player_show', { 'id': player.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('player_edit', { 'id': player.id }) }}">edit</a>
-                        </li>
+                        <a role="button" class="btn btn-success"
+                           href="{{ path('player_show', { 'id': player.id }) }}">Voir</a>
+                        <a role="button" class="btn btn-danger"
+                           href="{{ path('player_edit', { 'id': player.id }) }}">Modifier</a>
                     </ul>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+        <a href="{{ path('player_new') }}" role="button" class="btn btn-primary">Ajouter un joueur</a>
 
-    <ul>
-        <li>
-            <a href="{{ path('player_new') }}">Create a new player</a>
-        </li>
-    </ul>
+    </div></div>
 {% endblock %}

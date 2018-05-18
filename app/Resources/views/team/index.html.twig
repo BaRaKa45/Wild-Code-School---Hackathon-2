@@ -1,37 +1,30 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
     {% include 'admin/navbar.html.twig' %}
-    <div class="container">
-        <div class="card ">
-
-        <h1>Teams list</h1>
-
-    <table>
-        <thead>
+<div class="container">
+    <div class="card ">
+        <div class="card-header">
+            List des équipes
+        </div>
+        <table class="table table-striped">
+            <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Flag</th>
-                <th>Description</th>
-                <th>Actions</th>
+                <th>Nom</th>
+                <th>Drapeau</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
         {% for team in teams %}
-            <tr class="card">
+            <tr>
                 <td><a href="{{ path('team_show', { 'id': team.id }) }}">{{ team.id }}</a></td>
                 <td>{{ team.name }}</td>
-                <td>{{ team.flag }}</td>
-                <td>{{ team.description }}</td>
+                <td><img class="flag-admin" src="{{ team.flag }}">
                 <td>
                     <ul>
-                        <li>
-                            <a href="{{ path('team_show', { 'id': team.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('team_edit', { 'id': team.id }) }}">edit</a>
-                        </li>
+                        <a role="button" class="btn btn-success"
+                           href="{{ path('team_show', { 'id': team.id }) }}">Voir</a>
+                        <a role="button" class="btn btn-danger"
+                           href="{{ path('team_edit', { 'id': team.id }) }}">Modifier</a>
                     </ul>
                 </td>
             </tr>
@@ -39,10 +32,6 @@
         </tbody>
     </table>
 
-    <div>
-        <li>
-            <a href="{{ path('team_new') }}">Create a new team</a>
-        </li>
-    </div>
+            <a href="{{ path('team_new') }}" role="button" class="btn btn-primary">AJouter une équipe</a>
     </div>
 {% endblock %}
