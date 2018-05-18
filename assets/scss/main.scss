@@ -21,7 +21,7 @@ body {
 
   .navbar-light .navbar-nav .nav-link:hover {
     text-decoration: none;
-    color: red;
+    color: gold;
     transition-duration: 3s;
 
   }
@@ -87,12 +87,18 @@ body {
 
   }
   .imageheader{
-    width: 100%;
     height: 300px;
-    background-image: url("https://image.ibb.co/mMLbDy/WEB_1170x800px_Portfolio_Hockey.jpg");
-    background-repeat: no-repeat;
-    object-fit: contain;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526635010-fe9a650df5e02b493ebf15bb8de15261.jpg");
+    object-fit: cover;
     background-attachment: fixed;
+  }
+  .imageheader2{
+    height: 300px;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526635436-pexels-photo-63897.jpeg");
+    object-fit: cover;
+    background-attachment: fixed;
+    box-shadow: 5px 5px 10px #EEE;
+    margin-bottom: 20px;
   }
 
   .img-thumbnail {
