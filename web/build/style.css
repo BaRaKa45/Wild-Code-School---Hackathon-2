@@ -9574,6 +9574,11 @@ body .card-text {
   max-height: 200px;
 }
 
+body .card-text2 {
+  text-align: justify;
+  max-height: 100px;
+}
+
 body .playerPics {
   height: 300px;
   width: 300px;
@@ -9611,6 +9616,10 @@ body .playerCards {
 
 body .espace {
   margin-top: 50px;
+}
+
+body .espace1 {
+  margin-top: 100px;
 }
 
 body .flex-parent {
@@ -9711,6 +9720,7 @@ body .item:hover {
   color: #222;
   text-shadow: 0px 0px .1px #222;
 }
+
 
 body .footer {
   height: 130px;
