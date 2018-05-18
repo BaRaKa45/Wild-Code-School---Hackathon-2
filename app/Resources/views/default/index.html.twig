@@ -7,21 +7,21 @@
         <p>Equipe 1 : {{ contest.resultTeam1 }} / Equipe 2 : {{ contest.resultTeam2 }}</p>
     {% endfor %}#}
 
-    <section class="container-fluid">
+    <section class="home container-fluid">
         {% for contest in contests %}
             <div class="d-flex flex-row">
-                <div class="col-md-4">
-                    <div class="p-2 item styleItem1 first">
+                <div class="col-md-3 offset-md-1">
+                    <div class="p-2 item styleItem1 first" style="background-image: url('{{ contest.team1.flag }}')">
                         <h3>{{ contest.team1.name }}</h3>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <p>{{ contest.team1.name }} VS {{ contest.team2.name }}</p>
-                    <p>Le {{ contest.date|date('d-m-Y') }}</p>
-                    <p>Résultats : {{ contest.resultTeam1 }} / {{ contest.resultTeam2 }} </p>
+                    <p style="font-weight: bold; font-size: 35px; color: #fff">{{ contest.team1.name }} VS {{ contest.team2.name }}</p>
+                    <p style="font-size: 30px; color: #fff;">Le {{ contest.date|date('d-m-Y') }}</p>
+                    <p style="font-size: 30px; color: #fff;">Résultats : {{ contest.resultTeam1 }} / {{ contest.resultTeam2 }} </p>
                 </div>
-                <div class="col-md-4">
-                    <div class="p-2 item styleItem2 second">
+                <div class="col-md-3">
+                    <div class="p-2 item styleItem2 second" style="background-image: url('{{ contest.team2.flag }}')">
                         <h3>{{ contest.team2.name }}</h3>
                     </div>
                 </div>
