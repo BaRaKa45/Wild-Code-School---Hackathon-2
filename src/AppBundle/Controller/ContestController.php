@@ -32,6 +32,25 @@ class ContestController extends Controller
     }
 
     /**
+     * Lists all contest entities.
+     *
+     * @Route("/list", name="contest_index2")
+     * @Method("GET")
+     */
+    public function index2Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $contests = $em->getRepository('AppBundle:Contest')->findAll();
+        $teams = $em->getRepository('AppBundle:Team')->findAll();
+        return $this->render('contest/default.html.twig', array(
+            'contests' => $contests,
+            'teams' => $teams,
+        ));
+    }
+
+
+    /**
      * Creates a new contest entity.
      *
      * @Route("/new", name="contest_new")

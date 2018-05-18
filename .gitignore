@@ -1,6 +1,5 @@
 /.web-server-pid
 /app/config/parameters.yml
-/web/build/
 /phpunit.xml
 /var/*
 !/var/cache
@@ -17,3 +16,6 @@
 /web/bundles/
 .idea/
 /node_modules/*
+web/build/
+web/build/style.css
+
