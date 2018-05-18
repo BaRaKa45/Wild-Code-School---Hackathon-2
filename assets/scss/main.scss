@@ -273,7 +273,7 @@ body {
   }
   /* HOME */
   .home {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),url(https://images.alphacoders.com/295/295931.jpg);
+    background-image: /*linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),*/url(https://images.alphacoders.com/295/295931.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -283,7 +283,8 @@ body {
     width: 100%;
     height: 165px;
     margin: 5px;
-    margin-bottom: 150px;
+    margin-top: 75px;
+    margin-bottom: 75px;
     background-size: 100% 200%;
     background-position: right;
     background-repeat: no-repeat;
