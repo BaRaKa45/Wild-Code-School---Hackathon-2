@@ -6,50 +6,177 @@
             <ul>
                 <li>&nbsp;</li>
 
-                <li class="game game-top winner"><img class="small-flag small-flag-top" src="{{ contests.1.team1.flag }}">{{ contests.1.team1 }} <span>{{ contests.1.resultTeam1 }}</span></li>
+                <li class="game game-top winner">
+                    {% if contests.0.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.0.team1.flag }}">
+                        {{ contests.0.team1 }} <span> {{ contests.0.resultTeam1 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
                 <li>&nbsp;</li>
-                <li class="game game-bottom "><img class="small-flag" src="{{ contests.1.team2.flag }}">{{ contests.1.team2 }}<span>{{ contests.1.resultTeam2 }}</span></li>
+                <li class="game game-bottom ">
+                    {% if contests.0.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.0.team2.flag }}">
+                        {{ contests.0.team2 }} <span> {{ contests.0.resultTeam2 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
 
                 <li>&nbsp;</li>
 
-                <li class="game game-top winner"><img class="small-flag small-flag-top" src="{{ contests.2.team1.flag }}">{{ contests.2.team1 }}<span>{{ contests.2.resultTeam1 }}</span></li>
+                <li class="game game-top winner">
+                    {% if contests.1.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.1.team1.flag }}">
+                        {{ contests.1.team1 }} <span> {{ contests.1.resultTeam1 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
                 <li>&nbsp;</li>
-                <li class="game game-bottom "><img class="small-flag" src="{{ contests.2.team2.flag }}">{{ contests.2.team2 }}<span>{{ contests.2.resultTeam2 }}</span></li>
+                <li class="game game-bottom ">
+                    {% if contests.1.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.1.team2.flag }}">
+                        {{ contests.1.team2 }} <span> {{ contests.1.resultTeam2 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
 
                 <li>&nbsp;</li>
 
-                <li class="game game-top winner">Duke <span>73</span></li>
+                <li class="game game-top winner">
+                    {% if contests.2.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.2.team1.flag }}">
+                        {{ contests.2.team1 }} <span> {{ contests.2.resultTeam1 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
                 <li>&nbsp;</li>
-                <li class="game game-bottom ">Albany <span>61</span></li>
+                <li class="game game-bottom ">
+                    {% if contests.2.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.2.team2.flag }}">
+                        {{ contests.2.team2 }} <span> {{ contests.2.resultTeam2 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
                 <li>&nbsp;</li>
 
-                <li class="game game-top winner">Duke <span>73</span></li>
+                <li class="game game-top winner">
+                    {% if contests.3.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.3.team1.flag }}">
+                        {{ contests.3.team1 }} <span> {{ contests.3.resultTeam1 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
                 <li>&nbsp;</li>
-                <li class="game game-bottom ">Albany <span>61</span></li>
+                <li class="game game-bottom ">
+                    {% if contests.3.id is defined %}
+                        <img class="small-flag small-flag-top" src="{{ contests.3.team2.flag }}">
+                        {{ contests.3.team2 }} <span> {{ contests.3.resultTeam2 }} </span>
+                    {% else %}
+                        <img class="small-flag small-flag-top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+                </li>
 
                 <li>&nbsp;</li>
             </ul>
             <ul>
                 <li>&nbsp;</li>
 
-                <li class="game game-top winner"><img class="small-flag top" src="{{ contests.1.team1.flag }}">Lousville <span>79</span></li>
-                <li>&nbsp;</li>
-                <li class="game game-bottom ">NC A&T <span>48</span></li>
+                <li class="game game-top winner">
+                    {% if contests.0.id is defined %}
+                        {% if (contests.0.resultTeam1 > contests.0.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.0.team1.flag}}"><span></span></li>
+                        {% elseif (contests.0.resultTeam1 < contests.0.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.0.team2.flag}}"><span></span></li>
+                        {% else %}
+                            <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                        {% endif %}
+                    {% else %}
+                        <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
 
                 <li>&nbsp;</li>
 
-                <li class="game game-top winner">Colo St <span>84</span></li>
+                <li class="game game-bottom ">
+                    {% if contests.1.id is defined %}
+                        {% if (contests.1.resultTeam1 > contests.1.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.1.team1.flag}}"><span></span></li>
+                        {% elseif (contests.1.resultTeam1 < contests.1.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.1.team2.flag}}"><span></span></li>
+                        {% else %}
+                            <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                            {% endif %}
+                    {% else %}
+                        <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+
                 <li>&nbsp;</li>
-                <li class="game game-bottom ">Missouri <span>72</span></li>
+
+                <li class="game game-top winner">
+                    {% if contests.2.id is defined %}
+                        {% if (contests.2.resultTeam1 > contests.2.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.2.team1.flag}}"><span></span></li>
+                        {% elseif (contests.2.resultTeam1 < contests.2.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.2.team2.flag}}"><span></span></li>
+                        {% else %}
+                            <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                        {% endif %}
+                    {% else %}
+                        <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+
+                <li>&nbsp;</li>
+
+                <li class="game game-bottom ">
+                    {% if contests.3.id is defined %}
+                        {% if (contests.3.resultTeam1 > contests.3.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.3.team1.flag}}"><span></span></li>
+                        {% elseif (contests.3.resultTeam1 < contests.3.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.3.team2.flag}}"><span></span></li>
+                        {% else %}
+                            <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                        {% endif %}
+                    {% else %}
+                        <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
 
                 <li>&nbsp;</li>
             </ul>
             <ul>
                 <li>&nbsp;</li>
 
-                <li class="game game-top winner">Lousville <span>85</span></li>
+                <li class="game game-top winner">
+                    {% if contests.4.id is defined %}
+                        {% if (contests.4.resultTeam1 > contests.4.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.4.team1.flag}}"><span></span></li>
+                        {% elseif (contests.4.resultTeam1 < contests.4.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.4.team2.flag}}"><span></span></li>
+                        {% else %}
+                            <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                        {% endif %}
+                    {% else %}
+                        <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
+
                 <li>&nbsp;</li>
-                <li class="game game-bottom ">Duke <span>63</span></li>
+                <li class="game game-bottom ">
+                    {% if contests.5.id is defined %}
+                        {% if (contests.5.resultTeam1 > contests.5.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.5.team1.flag}}"><span></span></li>
+                        {% elseif (contests.5.resultTeam1 < contests.5.resultTeam2) %}
+                            <img class="small-flag top" src="{{ contests.5.team2.flag}}"><span></span></li>
+                        {% else %}
+                            <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                        {% endif %}
+                    {% else %}
+                        <img class="small-flag top" src="http://lateshtprediction.com/image/MatchImages/coming-soon.png">
+                    {% endif %}
 
                 <li>&nbsp;</li>
             </ul>
