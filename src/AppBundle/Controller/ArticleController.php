@@ -31,6 +31,8 @@ class ArticleController extends Controller
         ));
     }
 
+
+
     /**
      * Creates a new article entity.
      *

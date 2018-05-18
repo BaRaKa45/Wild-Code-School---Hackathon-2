@@ -135,6 +135,10 @@ body {
   .card-text {
     max-height: 200px;
   }
+  .card-text2 {
+    text-align: justify;
+    max-height: 100px;
+  }
 
   .playerPics {
     height: 300px;
@@ -147,6 +151,8 @@ body {
     background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526635010-fe9a650df5e02b493ebf15bb8de15261.jpg");
     object-fit: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+
   }
   .imageheader2{
     height: 300px;
@@ -154,6 +160,27 @@ body {
     object-fit: cover;
     background-attachment: fixed;
     box-shadow: 5px 5px 10px #EEE;
+    background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+  }
+  .imageheader4{
+    height: 250px;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526635436-pexels-photo-63897.jpeg");
+    object-fit: cover;
+    background-attachment: fixed;
+    box-shadow: 5px 5px 10px #EEE;
+    background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+  }
+  .imageheader3{
+    height: 200px;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526639708-hockey-jeunes-2.jpg");
+    object-fit: cover;
+    background-attachment: fixed;
+    box-shadow: 5px 5px 10px #EEE;
+    background-repeat: no-repeat;
     margin-bottom: 20px;
   }
 
@@ -171,6 +198,9 @@ body {
   }
   .espace {
     margin-top: 50px;
+  }
+  .espace1 {
+    margin-top: 100px;
   }
   /* Size img Equipe*/
 
@@ -278,5 +308,34 @@ body {
     .styleItem2 {
       margin-left: 50px;
     }
+  }
+
+  .footer {
+    height: 130px;
+    width: 100%;
+    background-color: #343a40;
+    color:white;
+    font-size: 1.2em;
+    padding: 20px;
+  }
+
+  .footer a {
+    color:white;
+  }
+
+  .footer a:hover {
+    color:red;
+    text-decoration: none;
+  }
+
+  .footer p {
+    color:white;
+  }
+
+  .footer .copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }
