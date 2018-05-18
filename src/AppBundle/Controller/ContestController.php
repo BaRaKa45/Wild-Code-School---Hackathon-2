@@ -42,9 +42,10 @@ class ContestController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $contests = $em->getRepository('AppBundle:Contest')->findAll();
-
+        $teams = $em->getRepository('AppBundle:Team')->findAll();
         return $this->render('contest/default.html.twig', array(
             'contests' => $contests,
+            'teams' => $teams,
         ));
     }
 

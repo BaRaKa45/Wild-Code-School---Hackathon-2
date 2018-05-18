@@ -49,7 +49,7 @@ class Team
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string")
+     * @ORM\Column(name="description", type="text")
      */
 
     private $description;
