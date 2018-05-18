@@ -78,7 +78,7 @@ body {
 
   .navbar-light .navbar-nav .nav-link:hover {
     text-decoration: none;
-    color: red;
+    color: gold;
     transition-duration: 3s;
 
   }
@@ -135,6 +135,10 @@ body {
   .card-text {
     max-height: 200px;
   }
+  .card-text2 {
+    text-align: justify;
+    max-height: 100px;
+  }
 
   .playerPics {
     height: 300px;
@@ -143,12 +147,41 @@ body {
 
   }
   .imageheader{
-    width: 100%;
     height: 300px;
-    background-image: url("https://image.ibb.co/mMLbDy/WEB_1170x800px_Portfolio_Hockey.jpg");
-    background-repeat: no-repeat;
-    object-fit: contain;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526635010-fe9a650df5e02b493ebf15bb8de15261.jpg");
+    object-fit: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+
+  }
+  .imageheader2{
+    height: 300px;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526635436-pexels-photo-63897.jpeg");
+    object-fit: cover;
+    background-attachment: fixed;
+    box-shadow: 5px 5px 10px #EEE;
+    background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+  }
+  .imageheader4{
+    height: 250px;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526635436-pexels-photo-63897.jpeg");
+    object-fit: cover;
+    background-attachment: fixed;
+    box-shadow: 5px 5px 10px #EEE;
+    background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+  }
+  .imageheader3{
+    height: 200px;
+    background-image: url("https://image.noelshack.com/fichiers/2018/20/5/1526639708-hockey-jeunes-2.jpg");
+    object-fit: cover;
+    background-attachment: fixed;
+    box-shadow: 5px 5px 10px #EEE;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
   }
 
   .img-thumbnail {
@@ -165,6 +198,9 @@ body {
   }
   .espace {
     margin-top: 50px;
+  }
+  .espace1 {
+    margin-top: 100px;
   }
   /* Size img Equipe*/
 
@@ -235,11 +271,20 @@ body {
     height: 133px;
     object-fit: cover;
   }
+  /* HOME */
+  .home {
+    background-image: /*linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),*/url(https://images.alphacoders.com/295/295931.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
   .item {
     color: #fff;
     width: 100%;
-    height: 140px;
+    height: 165px;
     margin: 5px;
+    margin-top: 75px;
+    margin-bottom: 75px;
     background-size: 100% 200%;
     background-position: right;
     background-repeat: no-repeat;
@@ -248,15 +293,50 @@ body {
       padding: 5px;
     }
     &.first {
-      background-image: linear-gradient(130deg, rgba(172, 172, 172, .9) 25%, rgba(172, 172, 172, 0.3)), url(https://media.easports.com/content/www-easports/en_US/fifa/news/2015/fifa-16-e3-gameplay-trailer/_jcr_content/headerImages/image.img.jpg);
+      background-image: linear-gradient(130deg, rgba(172, 172, 172, .9) 25%, rgba(172, 172, 172, 0.3))/*, url(https://media.easports.com/content/www-easports/en_US/fifa/news/2015/fifa-16-e3-gameplay-trailer/_jcr_content/headerImages/image.img.jpg)*/;
     }
     &.second {
-      background-image: linear-gradient(130deg, rgba(132, 132, 132, .9) 25%, rgba(255, 255, 255, .7)), url(https://s.ndtvimg.com/images/stories/brazuca-640.jpg);
+      background-image: linear-gradient(130deg, rgba(132, 132, 132, .9) 25%, rgba(255, 255, 255, .7))/*, url(https://s.ndtvimg.com/images/stories/brazuca-640.jpg)*/;
     }
     &:hover {
       background: #f2f2f2;
       color: #222;
       text-shadow: 0px 0px .1px #222;
     }
+    .styleItem1 {
+      margin-right: 50px;
+    }
+    .styleItem2 {
+      margin-left: 50px;
+    }
+  }
+
+  .footer {
+    height: 130px;
+    width: 100%;
+    background-color: #343a40;
+    color:white;
+    font-size: 1.2em;
+    padding: 20px;
+  }
+
+  .footer a {
+    color:white;
+  }
+
+  .footer a:hover {
+    color:red;
+    text-decoration: none;
+  }
+
+  .footer p {
+    color:white;
+  }
+
+  .footer .copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }

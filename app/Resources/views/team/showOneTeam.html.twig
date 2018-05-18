@@ -2,8 +2,7 @@
 
 {% block body %}
 
-    <div class="imageheader">
-    </div>
+    <div class="imageheader"></div>
 
     <div class="container">
         <div class="row">
@@ -15,7 +14,7 @@
         </div>
     </div>
     <hr>
-    <h1> Joueurs dans l'équipe.</h1>
+    <h1> Joueurs de l'équipe.</h1>
     <div class="espace"></div>
     {% for player in team.players %}
         <div class="container">
@@ -37,7 +36,9 @@
                 </div>
             </div>
         </div>
+        </div>
     {% else %} <p>Pas de joueur dans cette équipe !</p>
+
     {% endfor %}
 
 {% endblock %}

@@ -22,6 +22,29 @@ class Article
     private $id;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="pictures", type="string", length=250, nullable=true)
+     */
+    private $pictures;
+
+    /**
+     * @return int
+     */
+    public function getPictures()
+    {
+        return $this->pictures;
+    }
+
+    /**
+     * @param int $pictures
+     */
+    public function setPictures($pictures)
+    {
+        $this->pictures = $pictures;
+    }
+
+    /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
