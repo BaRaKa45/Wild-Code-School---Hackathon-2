@@ -2,21 +2,16 @@
 
 {% block body %}
     {% include 'admin/navbar.html.twig' %}
-    <h1>Contest edit</h1>
-
-    {{ form_start(edit_form) }}
+    <div class="container">
+        <div class="card ">
+            <div class="card-header"">
+            Editer un joueur        </div>
+        {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+        <input type="submit" value="Edit" role="button" class="btn btn-success" />
+        {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('contest_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
+
+    </div></div>
 {% endblock %}
