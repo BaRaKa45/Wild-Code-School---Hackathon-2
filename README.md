@@ -1,10 +1,10 @@
-hackathon 2 - Site d'une coupe du monde d'un sport
+hackathon 2 - Site d'une coupe du monde de hockey
 ==================================================
 
 Sujet:
 ------
 
-La Fédération Internationale du <sport collectif> vous contacte pour créer le site qui va permettre à des centaines de millions de personnes de suivre cet événement exceptionnel sur internet.
+La Fédération Internationale du hockey sur glace vous contacte pour créer le site qui va permettre à des centaines de millions de personnes de suivre cet événement exceptionnel sur internet.
 
 Le contenu minimum:
  - La liste des équipes de chaque pays en compétition
